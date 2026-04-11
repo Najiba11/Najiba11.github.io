@@ -102,13 +102,13 @@
   <aside class="sidebar">
     <img src="profile.jpg" alt="Najiba Rashid" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid #e8e8e8;margin-bottom:28px;">
     <h1>NAJIBA RASHID</h1>
-    <div class="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="540615071c1d101a15141b0611131b1a07001500117a111001">[email&#160;protected]</a></div>
+    <div class="email" id="sidebar-email"></div>
     <div class="location">📍 Corvallis, Oregon, USA</div>
     <p class="bio">Ph.D. candidate in Geography &amp; Geospatial Science at Oregon State University.</p>
     <div class="textile-band"></div>
     <div class="social-icons">
       <!-- Email -->
-      <a href="/cdn-cgi/l/email-protection#463427352e2f22282706293423212928353227322368232233" title="Email">
+      <a href="mailto:rashidna&#64;oregonstate.edu" title="Email">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
       </a>
       <!-- Google Scholar -->
@@ -138,7 +138,7 @@
       <div class="dissertation-box">
         <h3>Impact of Post-Disaster Debris Management on Communities</h3>
         <div class="advisor">Advisor: Dr. Jenna Tilt · Oregon State University</div>
-        <p>My dissertation investigates the environmental, social, and logistical impacts of post-disaster debris management on affected communities. Using Hurricane Helene and Milton (2024) as case studies, I employ a mixed-methods approach combining in-depth interviews, community surveys, geospatial analysis, and remote sensing to understand how debris management decisions shape recovery outcomes, community well-being, and environmental justice. This research aims to inform more equitable and effective disaster debris policies for vulnerable coastal communities.</p>
+        <p>My dissertation investigates the environmental, social, and logistical impacts of post-disaster debris management on affected communities. Using Hurricane Helene and Milton (2024) as case studies, I employ a mixed-methods approach combining in-depth interviews, community surveys, geospatial analysis, and remote sensing to understand how debris management decisions shape recovery outcomes, community well-being, and environmental justice. This research aims to inform more equitable and effective disaster debris policies for vulnerable coastal and urban communities.</p>
       </div>
       <p style="font-size:12px; color:#aaa; margin-top:14px; font-style:italic;">✏️ Edit this section to match your exact dissertation title and description.</p>
     </section>
@@ -250,7 +250,7 @@
     <section id="contact">
       <div class="section-title">Contact</div>
       <div class="contact-grid">
-        <div class="contact-card"><div class="icon">✉</div><div class="label">Email</div><a href="/cdn-cgi/l/email-protection#d5a7b4a6bdbcb1bbb495baa7b0b2babba6a1b4a1b0fbb0b1a0"><span class="__cf_email__" data-cfemail="681a091b00010c060928071a0d0f07061b1c091c0d460d0c1d">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="icon">✉</div><div class="label">Email</div><a id="contact-email" href="#"></a></div>
         <div class="contact-card"><div class="icon">🎓</div><div class="label">Google Scholar</div><a href="https://scholar.google.com/citations?user=n66m78sAAAAJ&hl=en" target="_blank">View Profile</a></div>
         <div class="contact-card"><div class="icon">📍</div><div class="label">Location</div><span>Corvallis, Oregon, USA</span></div>
         <div class="contact-card"><div class="icon">🔗</div><div class="label">LinkedIn</div><a href="https://www.linkedin.com/in/najiba-rashid-922a37146" target="_blank">Connect on LinkedIn</a></div>
@@ -259,4 +259,20 @@
 
   </main>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"><
+<script>
+  (function(){
+    var u='rashidna', d='oregonstate.edu', e=u+'@'+d;
+    document.getElementById('sidebar-email').textContent=e.toUpperCase();
+    var c=document.getElementById('contact-email');
+    c.href='mailto:'+e; c.textContent=e;
+  })();
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+  });
+</script>
+</body>
+</html><
