@@ -28,7 +28,6 @@
   .page { display: flex; min-height: 100vh; padding-top: 52px; }
 
   .sidebar { width: var(--sidebar-width); min-width: var(--sidebar-width); background: var(--sidebar-bg); border-right: 1px solid var(--border); padding: 50px 36px 40px; position: fixed; top: 52px; bottom: 0; overflow-y: auto; display: flex; flex-direction: column; }
-  .profile-photo-placeholder { width: 160px; height: 160px; border-radius: 50%; margin-bottom: 28px; border: 3px solid #e8e8e8; background: linear-gradient(135deg, #5b9a8f, #2a7a6e); display: flex; align-items: center; justify-content: center; font-size: 44px; color: #fff; font-family: var(--heading-font); font-weight: 600; }
   .sidebar h1 { font-family: var(--heading-font); font-size: 26px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 14px; line-height: 1.2; }
   .sidebar .email { font-family: var(--mono-font); font-size: 11px; letter-spacing: 1.5px; color: var(--text-light); margin-bottom: 8px; word-break: break-all; }
   .sidebar .location { font-size: 13px; color: var(--text-light); margin-bottom: 20px; }
@@ -50,12 +49,6 @@
   .content-block .dates { font-family: var(--mono-font); font-size: 12px; font-weight: 700; color: var(--accent); }
   .content-block ul { margin-top: 10px; padding-left: 18px; }
   .content-block li { font-size: 13.5px; color: var(--text-light); margin-bottom: 6px; line-height: 1.6; }
-
-  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .skill-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; padding: 18px 20px; transition: border-color .2s; }
-  .skill-card:hover { border-color: var(--teal); }
-  .skill-card .label { font-family: var(--mono-font); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
-  .skill-card p { font-size: 13.5px; color: var(--text-light); line-height: 1.6; }
 
   .pub-item { padding: 18px 0; border-bottom: 1px solid #eee; }
   .pub-item:last-child { border-bottom: none; }
@@ -91,7 +84,7 @@
     .sidebar { position: relative; top: 0; width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); padding: 36px 24px; }
     .page { flex-direction: column; }
     .main { margin-left: 0; padding: 36px 24px 60px; }
-    .contact-grid, .skills-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 600px) { .nav-links { display: none; } }
 </style>
@@ -106,7 +99,6 @@
     <a href="#experience">Experience</a><span>|</span>
     <a href="#publications">Publications</a><span>|</span>
     <a href="#presentations">Talks</a><span>|</span>
-    <a href="#skills">Skills</a><span>|</span>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -131,7 +123,7 @@
 
     <section id="about">
       <div class="section-title">About</div>
-      <p style="font-size:15px; color: var(--text-light); line-height:1.8;">I am Najiba Rashid, a PhD candidate in Geography and Geospatial Science at Oregon State University. My work focuses on using GIS, remote sensing, and mixed methods to understand climate risk, disaster debris management, and community resilience in coastal and urban areas.In my free time, I enjoy hiking and reading books.</p>
+      <p style="font-size:15px; color: var(--text-light); line-height:1.8;">I am Najiba Rashid, a PhD candidate in Geography and Geospatial Science at Oregon State University. My work focuses on using GIS, remote sensing, and mixed methods to understand climate risk, disaster debris management, and community resilience in coastal and urban areas. In my free time, I enjoy hiking and reading books.</p>
     </section>
 
     <section id="education">
@@ -187,18 +179,6 @@
       </ul>
     </section>
 
-    <section id="skills">
-      <div class="section-title">Skills</div>
-      <div class="skills-grid">
-        <div class="skill-card"><div class="label">Geospatial &amp; Remote Sensing</div><p>Google Earth Engine, ArcGIS Pro, ENVI, Erdas Imagine, Idrisi Selva</p></div>
-        <div class="skill-card"><div class="label">Programming</div><p>Python, Java, GeoPandas, JStrobe, Visual Studio</p></div>
-        <div class="skill-card"><div class="label">Statistical Analysis</div><p>IBM SPSS, R Studio, Microsoft Excel</p></div>
-        <div class="skill-card"><div class="label">Qualitative Analysis</div><p>NVivo, Survey Design, In-depth Interviews</p></div>
-        <div class="skill-card"><div class="label">Design &amp; Drafting</div><p>AutoCAD, Microsoft Office Suite</p></div>
-        <div class="skill-card"><div class="label">Languages</div><p>English, Bengali, Hindi</p></div>
-      </div>
-    </section>
-
     <section id="service">
       <div class="section-title">Service</div>
       <ul class="cert-list">
@@ -216,7 +196,7 @@
           <img src="conference.png" alt="Conference presentation with research team" style="width:100%; height:220px; object-fit:cover;">
           <div style="padding:14px 16px;">
             <div style="font-family:var(--mono-font); font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:4px;">Conference</div>
-            <p style="font-size:13px; color:var(--text-light); line-height:1.5;">Presenting research with the Cascadia Copes team at the Society for Applied Anthropology (SfAA), 2025.</p>
+            <p style="font-size:13px; color:var(--text-light); line-height:1.5;">Cascadia Copes team at the AAG 2026.</p>
           </div>
         </div>
         <div style="background:#fff; border:1px solid #e8e8e8; border-radius:4px; overflow:hidden;">
