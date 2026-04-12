@@ -43,16 +43,27 @@
   section { margin-bottom: 56px; }
   .section-title { font-family: var(--mono-font); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; text-align: center; color: var(--accent); margin-bottom: 32px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
 
+  /* Page divider between major nav groups */
+  .page-divider { border: none; border-top: 3px solid var(--teal); margin: 60px 0 50px; opacity: .3; }
+
   .content-block { border-left: 3px solid #e0e0e0; padding: 20px 24px; margin-bottom: 16px; background: #fff; border-radius: 0 4px 4px 0; transition: border-color .2s; }
   .content-block:hover { border-left-color: var(--teal); }
   .content-block h3 { font-family: var(--heading-font); font-size: 17px; font-weight: 700; margin-bottom: 3px; }
   .content-block .meta { font-size: 14px; color: var(--text-light); margin-bottom: 2px; }
   .content-block .dates { font-family: var(--mono-font); font-size: 12px; font-weight: 700; color: var(--accent); }
 
-  .dissertation-box { background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; padding: 28px 30px; border-left: 4px solid var(--teal); margin-bottom: 36px; }
+  .dissertation-box { background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; padding: 28px 30px; border-left: 4px solid var(--teal); }
   .dissertation-box h3 { font-family: var(--heading-font); font-size: 19px; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
   .dissertation-box .advisor { font-family: var(--mono-font); font-size: 12px; color: var(--teal); margin-bottom: 12px; }
   .dissertation-box p { font-size: 14px; color: var(--text-light); line-height: 1.8; }
+
+  .org-card { display: flex; gap: 28px; align-items: flex-start; background: #fff; border: 1px solid #e8e8e8; border-radius: 6px; padding: 28px; margin-bottom: 20px; transition: box-shadow .2s; }
+  .org-card:hover { box-shadow: 0 3px 16px rgba(0,0,0,.06); }
+  .org-logo { width: 130px; min-width: 130px; height: 130px; object-fit: contain; }
+  .org-info h3 { font-family: var(--heading-font); font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+  .org-info p { font-size: 14px; color: var(--text-light); line-height: 1.7; margin-bottom: 14px; }
+  .org-btn { display: inline-block; padding: 10px 24px; background: var(--teal); color: #fff; text-decoration: none; font-family: var(--mono-font); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 4px; transition: background .2s; }
+  .org-btn:hover { background: #1f5f55; }
 
   .pub-item { padding: 18px 0; border-bottom: 1px solid #eee; }
   .pub-item:last-child { border-bottom: none; }
@@ -63,25 +74,24 @@
   .pub-item a { font-size: 12px; color: var(--teal); text-decoration: none; font-family: var(--mono-font); }
   .pub-item a:hover { text-decoration: underline; }
 
-  .org-card { display: flex; gap: 28px; align-items: flex-start; background: #fff; border: 1px solid #e8e8e8; border-radius: 6px; padding: 30px; margin-bottom: 24px; transition: box-shadow .2s; }
-  .org-card:hover { box-shadow: 0 2px 14px rgba(0,0,0,.06); }
-  .org-logo { width: 140px; min-width: 140px; height: 140px; object-fit: contain; border-radius: 4px; }
-  .org-info h3 { font-family: var(--heading-font); font-size: 19px; font-weight: 700; margin-bottom: 10px; }
-  .org-info p { font-size: 14px; color: var(--text-light); line-height: 1.7; margin-bottom: 14px; }
-  .org-btn { display: inline-block; padding: 10px 24px; background: var(--teal); color: #fff; text-decoration: none; font-family: var(--mono-font); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 4px; transition: background .2s; }
-  .org-btn:hover { background: #1f5f55; }
+  .pres-item { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: var(--text-light); line-height: 1.6; }
 
-  .cv-section { text-align: center; padding: 40px 0; }
-  .cv-btn { display: inline-block; padding: 16px 40px; background: var(--teal); color: #fff; text-decoration: none; font-family: var(--mono-font); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; transition: background .2s; }
+  .award-item { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+  .award-item h3 { font-family: var(--heading-font); font-size: 16px; font-weight: 600; margin-bottom: 2px; }
+  .award-item .meta { font-size: 13px; color: var(--text-light); }
+
+  .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .gallery-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; overflow: hidden; }
+  .gallery-card img { width: 100%; height: 200px; object-fit: cover; }
+  .gallery-card p { padding: 12px 14px; font-size: 13px; color: var(--text-light); }
+  .gallery-wide { grid-column: span 2; }
+  .gallery-wide img { height: 240px; }
+
+  .cv-container { text-align: center; padding: 40px 0; }
+  .cv-icon { font-size: 64px; margin-bottom: 20px; }
+  .cv-text { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cv-btn { display: inline-block; padding: 16px 44px; background: var(--teal); color: #fff; text-decoration: none; font-family: var(--mono-font); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; transition: background .2s; }
   .cv-btn:hover { background: #1f5f55; }
-
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .contact-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; padding: 24px; text-align: center; transition: box-shadow .2s; }
-  .contact-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.06); }
-  .contact-card .icon { font-size: 22px; margin-bottom: 10px; }
-  .contact-card .label { font-family: var(--mono-font); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
-  .contact-card a, .contact-card span { font-size: 14px; color: var(--text); text-decoration: none; }
-  .contact-card a:hover { text-decoration: underline; }
 
   @media (max-width: 900px) {
     nav { padding: 0 16px; }
@@ -90,8 +100,8 @@
     .sidebar { position: relative; top: 0; width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); padding: 36px 24px; }
     .page { flex-direction: column; }
     .main { margin-left: 0; padding: 36px 24px 60px; }
-    .contact-grid { grid-template-columns: 1fr; }
     .org-card { flex-direction: column; align-items: center; text-align: center; }
+    .gallery-grid { grid-template-columns: 1fr; } .gallery-wide { grid-column: span 1; }
   }
   @media (max-width: 600px) { .nav-links { display: none; } }
 </style>
@@ -101,12 +111,10 @@
 <nav>
   <a class="nav-name" href="#">Najiba Rashid</a>
   <div class="nav-links">
-    <a href="#about" class="active">About</a><span>|</span>
-    <a href="#education">Education</a><span>|</span>
+    <a href="#about" class="active">Home</a><span>|</span>
     <a href="#research">Research</a><span>|</span>
-    <a href="#groups">Groups</a><span>|</span>
     <a href="#cv">CV</a><span>|</span>
-    <a href="#contact">Contact Me</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -134,13 +142,12 @@
 
   <main class="main">
 
-    <!-- ABOUT -->
+    <!-- ====== HOME ====== -->
     <section id="about">
-      <div class="section-title">About</div>
+      <div class="section-title">About Me</div>
       <p style="font-size:15px; color: var(--text-light); line-height:1.8;">I am Najiba Rashid, a PhD candidate in Geography and Geospatial Science at Oregon State University. My work focuses on using GIS, remote sensing, and mixed methods to understand climate risk, disaster debris management, and community resilience in coastal and urban areas. In my free time, I enjoy hiking and reading books.</p>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education">
       <div class="section-title">Education</div>
       <div class="content-block"><h3>Oregon State University</h3><div class="meta">Ph.D., Geography and Geospatial Science</div><div class="dates">Expected 2026</div></div>
@@ -148,54 +155,17 @@
       <div class="content-block"><h3>Khulna University of Engineering &amp; Technology</h3><div class="meta">B.S., Urban and Regional Planning</div><div class="dates">2015</div></div>
     </section>
 
-    <!-- RESEARCH -->
-    <section id="research">
-      <div class="section-title">Research</div>
-
+    <section id="dissertation">
+      <div class="section-title">Dissertation Research</div>
       <div class="dissertation-box">
         <h3>Impact of Post-Disaster Debris Management on Communities</h3>
         <div class="advisor">Advisor: Dr. Jenna Tilt &middot; Oregon State University</div>
-        <p>My dissertation investigates the environmental, social, and logistical impacts of post-disaster debris management on affected communities. Using Hurricane Helene and Milton (2024) as case studies, I employ a mixed-methods approach combining in-depth interviews, community surveys, geospatial analysis, and remote sensing to understand how debris management decisions shape recovery outcomes, community well-being, and environmental justice. This research aims to inform more equitable and effective disaster debris policies for vulnerable coastal and urban communities.</p>
-      </div>
-
-      <h4 style="font-family:var(--mono-font); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:20px;">Publications</h4>
-
-      <div class="pub-item"><div class="pub-year">2026</div><h3>Post-Disaster Debris Management: A Case Study of Hurricane Helene and Milton of Florida</h3><div class="authors">Rashid, N., Tilt, J.</div><div class="journal">Under Review &mdash; International Journal of Disaster Risk Reduction</div></div>
-      <div class="pub-item"><div class="pub-year">2026</div><h3>Community Asset Identification for Natural Hazards Research: A View from the Pacific Northwest</h3><div class="authors">Mah, A., Sepp, K., Riggio, C., Gleeman, E., Rashid, N., Blockstein, J., et al.</div><div class="journal">Under Review &mdash; International Journal of Disaster Risk Reduction</div></div>
-      <div class="pub-item"><div class="pub-year">2025</div><h3>Identification of Community Assets and Vulnerabilities: A Survey of Coastal Oregonians' Priorities for Natural Hazard Preparedness</h3><div class="authors">Mah, A. Y. J., Tilt, J., Blockstein, J., Rashid, N., &amp; Meselhe, A. E.</div><div class="journal">Natural Hazards</div><a href="https://doi.org/10.1007/s11069-025-07626-0">DOI: 10.1007/s11069-025-07626-0</a></div>
-      <div class="pub-item"><div class="pub-year">2023</div><h3>Land Grabbing and Migration in a Changing Climate: Comparative Perspectives from Senegal and Cambodia</h3><div class="authors">Rashid, N.</div><div class="journal">Geographical Review</div><a href="https://doi.org/10.1080/00167428.2023.2240198">DOI: 10.1080/00167428.2023.2240198</a></div>
-      <div class="pub-item"><div class="pub-year">2022</div><h3>Impact of Land Use Change and Urbanization on Urban Heat Island Effect in Narayanganj City, Bangladesh</h3><div class="authors">Rashid, N., Alam, J. A. M. M., Chowdhury, M. A., &amp; Islam, S. L. U.</div><div class="journal">Environmental Challenges, 8, 100571</div><a href="https://doi.org/10.1016/j.envc.2022.100571">DOI: 10.1016/j.envc.2022.100571</a></div>
-      <div class="pub-item"><div class="pub-year">2021</div><h3>Urban Resilience in Bangladesh: Integrating Local and National Planning Processes</h3><div class="authors">Rashid, J., &amp; Rashid, N.</div><div class="journal">Policy Brief &mdash; Climate and Development Knowledge Network</div></div>
-
-      <h4 style="font-family:var(--mono-font); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin: 36px 0 20px;">Gallery</h4>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-        <div style="background:#fff; border:1px solid #e8e8e8; border-radius:4px; overflow:hidden;">
-          <img src="presenting.jpg" alt="Presenting at Natural Hazard Workshop" style="width:100%; height:200px; object-fit:cover;">
-          <p style="padding:12px 14px; font-size:13px; color:var(--text-light);">Presenting research findings at the Natural Hazard Workshop, 2025.</p>
-        </div>
-        <div style="background:#fff; border:1px solid #e8e8e8; border-radius:4px; overflow:hidden;">
-          <img src="team-sfaa.jpg" alt="Presenting at SfAA" style="width:100%; height:200px; object-fit:cover;">
-          <p style="padding:12px 14px; font-size:13px; color:var(--text-light);">Presenting at SfAA, 2024.</p>
-        </div>
-        <div style="background:#fff; border:1px solid #e8e8e8; border-radius:4px; overflow:hidden;">
-          <img src="hazards-summit.jpg" alt="Natural Hazards Research Summit" style="width:100%; height:200px; object-fit:cover;">
-          <p style="padding:12px 14px; font-size:13px; color:var(--text-light);">Natural Hazards Research Summit, University of Maryland, 2024.</p>
-        </div>
-        <div style="background:#fff; border:1px solid #e8e8e8; border-radius:4px; overflow:hidden;">
-          <img src="conference.png" alt="Cascadia Copes team at AAG" style="width:100%; height:200px; object-fit:cover;">
-          <p style="padding:12px 14px; font-size:13px; color:var(--text-light);">Cascadia Copes team at the AAG 2026.</p>
-        </div>
-        <div style="background:#fff; border:1px solid #e8e8e8; border-radius:4px; overflow:hidden; grid-column: span 2;">
-          <img src="fieldwork.jpg" alt="Community engagement at Get Ready Fair" style="width:100%; height:240px; object-fit:cover;">
-          <p style="padding:12px 14px; font-size:13px; color:var(--text-light);">Engaging with Oregon coastal communities at the Get Ready Fair, Clatsop County, 2023.</p>
-        </div>
+        <p>My dissertation investigates the environmental, social, and logistical impacts of post-disaster debris management on affected communities. Using Hurricane Helene and Milton (2024) as case studies, I employ a mixed-methods approach combining in-depth interviews, community surveys, geospatial analysis, and remote sensing to understand how debris management decisions shape recovery outcomes, community well-being, and environmental justice.</p>
       </div>
     </section>
 
-    <!-- GROUPS AND ORGANIZATIONS -->
     <section id="groups">
       <div class="section-title">Groups &amp; Organizations</div>
-
       <div class="org-card">
         <img src="https://cascadiacopeshub.org/wp-content/uploads/2022/07/CoPes-Hub-logo-circle-768x768.png" alt="Cascadia CoPes Hub" class="org-logo">
         <div class="org-info">
@@ -204,9 +174,8 @@
           <a href="https://cascadiacopeshub.org/" target="_blank" class="org-btn">Hub Website</a>
         </div>
       </div>
-
       <div class="org-card">
-        <img src="https://www.designsafe-ci.org/static/images/nsf-nheri-logo.png" alt="NHERI GSC" class="org-logo" style="background:#fff; padding:10px;">
+        <img src="https://www.designsafe-ci.org/static/images/nsf-nheri-logo.png" alt="NHERI GSC" class="org-logo" style="padding:8px;">
         <div class="org-info">
           <h3>NHERI Graduate Student Council</h3>
           <p>NHERI (Natural Hazards Engineering Research Infrastructure) is a nation-wide, shared-use network of facilities tailored for the natural hazards engineering research community.</p>
@@ -215,25 +184,70 @@
       </div>
     </section>
 
-    <!-- CV -->
-    <section id="cv">
-      <div class="section-title">Curriculum Vitae</div>
-      <div class="cv-section">
-        <p style="font-size:15px; color:var(--text-light); margin-bottom:24px;">Download my full CV for a complete overview of my academic background, research, publications, and professional experience.</p>
-        <a href="Najiba_Rashid_CV.pdf" target="_blank" class="cv-btn">Download CV (PDF)</a>
-        <p style="font-size:12px; color:#aaa; margin-top:16px;">Upload your CV as <code>Najiba_Rashid_CV.pdf</code> to your repo to activate this link.</p>
+    <!-- ====== RESEARCH ====== -->
+    <hr class="page-divider" id="research">
+
+    <section id="publications">
+      <div class="section-title">Publications</div>
+      <div class="pub-item"><div class="pub-year">2026</div><h3>Post-Disaster Debris Management: A Case Study of Hurricane Helene and Milton of Florida</h3><div class="authors">Rashid, N., Tilt, J.</div><div class="journal">Under Review &mdash; International Journal of Disaster Risk Reduction</div></div>
+      <div class="pub-item"><div class="pub-year">2026</div><h3>Community Asset Identification for Natural Hazards Research: A View from the Pacific Northwest</h3><div class="authors">Mah, A., Sepp, K., Riggio, C., Gleeman, E., Rashid, N., Blockstein, J., et al.</div><div class="journal">Under Review &mdash; International Journal of Disaster Risk Reduction</div></div>
+      <div class="pub-item"><div class="pub-year">2025</div><h3>Identification of Community Assets and Vulnerabilities: A Survey of Coastal Oregonians' Priorities for Natural Hazard Preparedness</h3><div class="authors">Mah, A. Y. J., Tilt, J., Blockstein, J., Rashid, N., &amp; Meselhe, A. E.</div><div class="journal">Natural Hazards</div><a href="https://doi.org/10.1007/s11069-025-07626-0">DOI: 10.1007/s11069-025-07626-0</a></div>
+      <div class="pub-item"><div class="pub-year">2023</div><h3>Land Grabbing and Migration in a Changing Climate: Comparative Perspectives from Senegal and Cambodia</h3><div class="authors">Rashid, N.</div><div class="journal">Geographical Review</div><a href="https://doi.org/10.1080/00167428.2023.2240198">DOI: 10.1080/00167428.2023.2240198</a></div>
+      <div class="pub-item"><div class="pub-year">2022</div><h3>Impact of Land Use Change and Urbanization on Urban Heat Island Effect in Narayanganj City, Bangladesh</h3><div class="authors">Rashid, N., Alam, J. A. M. M., Chowdhury, M. A., &amp; Islam, S. L. U.</div><div class="journal">Environmental Challenges, 8, 100571</div><a href="https://doi.org/10.1016/j.envc.2022.100571">DOI: 10.1016/j.envc.2022.100571</a></div>
+      <div class="pub-item"><div class="pub-year">2021</div><h3>Urban Resilience in Bangladesh: Integrating Local and National Planning Processes</h3><div class="authors">Rashid, J., &amp; Rashid, N.</div><div class="journal">Policy Brief &mdash; Climate and Development Knowledge Network</div></div>
+    </section>
+
+    <section id="presentations">
+      <div class="section-title">Presentations</div>
+      <div class="pres-item"><strong>Guest Speaker</strong> &mdash; Disaster Waste and Debris Management, PLAN 670, University of Hawai&#x02BB;i at M&#x0101;noa, 2026.</div>
+      <div class="pres-item"><strong>Research &amp; Poster</strong> &mdash; Hurricane Helene and Milton Debris Management, Natural Hazard Workshop, 2025.</div>
+      <div class="pres-item"><strong>Research</strong> &mdash; Post Disaster Debris Management, Society for Applied Anthropology (SfAA), 2025.</div>
+      <div class="pres-item"><strong>Poster &amp; Research</strong> &mdash; Post Disaster Debris Management, Natural Hazards Research Summit, U. of Maryland, 2024.</div>
+      <div class="pres-item"><strong>Poster</strong> &mdash; Post Disaster Debris Management, State of the Coast, Newport, OR, 2023.</div>
+      <div class="pres-item"><strong>Poster</strong> &mdash; Post Disaster Debris Management, American Association of Geographers, 2023.</div>
+    </section>
+
+    <section id="awards">
+      <div class="section-title">Awards</div>
+      <div class="award-item"><h3>Arthur Parenzin Memorial Graduate Research Fellowship</h3><div class="meta">2023 ($500) &middot; 2024 ($500) &middot; 2025 ($1,000)</div></div>
+      <div class="award-item"><h3>Dr. Mary L. Brugo Graduate Geography Scholarship</h3><div class="meta">2025 ($500)</div></div>
+      <div class="award-item"><h3>Travel Award &mdash; Natural Hazards Research Summit</h3><div class="meta">2024 ($900)</div></div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-title">Gallery</div>
+      <div class="gallery-grid">
+        <div class="gallery-card"><img src="presenting.jpg" alt="Natural Hazard Workshop"><p>Presenting research findings at the Natural Hazard Workshop, 2025.</p></div>
+        <div class="gallery-card"><img src="team-sfaa.jpg" alt="SfAA"><p>Presenting at SfAA, 2024.</p></div>
+        <div class="gallery-card"><img src="hazards-summit.jpg" alt="Hazards Summit"><p>Natural Hazards Research Summit, University of Maryland, 2024.</p></div>
+        <div class="gallery-card"><img src="conference.png" alt="AAG"><p>Cascadia Copes team at the AAG 2026.</p></div>
+        <div class="gallery-card gallery-wide"><img src="fieldwork.jpg" alt="Get Ready Fair"><p>Engaging with Oregon coastal communities at the Get Ready Fair, Clatsop County, 2023.</p></div>
       </div>
     </section>
 
-    <!-- CONTACT ME -->
-    <section id="contact">
-      <div class="section-title">Contact Me</div>
-      <div class="contact-grid">
-        <div class="contact-card"><div class="icon">&#x2709;</div><div class="label">Email</div><a id="contact-email" href="#"></a></div>
-        <div class="contact-card"><div class="icon">&#x1F393;</div><div class="label">Google Scholar</div><a href="https://scholar.google.com/citations?user=n66m78sAAAAJ&hl=en" target="_blank">View Profile</a></div>
-        <div class="contact-card"><div class="icon">&#x1F4CD;</div><div class="label">Location</div><span>Corvallis, Oregon, USA</span></div>
-        <div class="contact-card"><div class="icon">&#x1F517;</div><div class="label">LinkedIn</div><a href="https://www.linkedin.com/in/najiba-rashid-922a37146" target="_blank">Connect on LinkedIn</a></div>
+    <!-- ====== CV ====== -->
+    <hr class="page-divider" id="cv">
+
+    <section>
+      <div class="section-title">Curriculum Vitae</div>
+      <div class="cv-container">
+        <div class="cv-icon">&#x1F4C4;</div>
+        <p class="cv-text">Download my full CV for a complete overview of my academic background, research, publications, and professional experience.</p>
+        <a href="Najiba_Rashid_CV.pdf" target="_blank" class="cv-btn">Download CV (PDF)</a>
       </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <hr class="page-divider" id="contact">
+
+    <section>
+      <div class="section-title">Contact Me</div>
+      <p style="font-size:15px; color:var(--text-light); line-height:2;">
+        <strong>Email:</strong> <span id="contact-email-text"></span><br>
+        <strong>Location:</strong> Corvallis, Oregon, USA<br>
+        <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=n66m78sAAAAJ&hl=en" target="_blank" style="color:var(--teal);">View Profile</a><br>
+        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/najiba-rashid-922a37146" target="_blank" style="color:var(--teal);">Connect on LinkedIn</a>
+      </p>
     </section>
 
   </main>
@@ -241,19 +255,33 @@
 
 <script>
   (function(){
-    var u='rashidna', d='oregonstate.edu', e=u+'@'+d;
+    var u='rashidna',d='oregonstate.edu',e=u+'@'+d;
     document.getElementById('sidebar-email').textContent=e.toUpperCase();
-    var c=document.getElementById('contact-email');
-    c.href='mailto:'+e; c.textContent=e;
     document.getElementById('email-icon').href='mailto:'+e;
+    document.getElementById('contact-email-text').textContent=e;
   })();
-  var sections = document.querySelectorAll('section');
+
+  // Highlight active nav on scroll
+  var navMap = [
+    {id:'about', nav:'#about'},
+    {id:'research', nav:'#research'},
+    {id:'cv', nav:'#cv'},
+    {id:'contact', nav:'#contact'}
+  ];
   var navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', function() {
-    var current = '';
-    sections.forEach(function(s) { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
-    navLinks.forEach(function(a) { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+    var scrollY = window.scrollY + 120;
+    var active = 'about';
+    navMap.forEach(function(item) {
+      var el = document.getElementById(item.id);
+      if (el && scrollY >= el.offsetTop) active = item.id;
+    });
+    var map = {about:'#about', research:'#research', cv:'#cv', contact:'#contact'};
+    navLinks.forEach(function(a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + active);
+    });
   });
 </script>
 </body>
 </html>
+
